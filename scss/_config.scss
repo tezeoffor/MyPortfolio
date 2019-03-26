@@ -1,8 +1,8 @@
-$primary-color:#444;
+$primary-color:#2c3e50;
 $secondary-color:#0388a6;
 $show-home-image: true;
 $home-image:url(../img/background.jpg);
-$brand-image:url(../img/brand.jpg);
+$brand-image:url(../img/facetwo.jpg);
 $background-opacity:0.9;
 
 @mixin easeOut{
@@ -12,7 +12,7 @@ $background-opacity:0.9;
 @mixin background{
   @if $show-home-image{
     &#bg-img{
-      background: $home-image;
+      background:$home-image;
       background-size: cover;
       background-attachment: fixed;
 

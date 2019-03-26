@@ -67,7 +67,7 @@
   &-nav{
     margin: 0;
     padding: 0;
-    background: darken($secondary-color, 5);
+    background: darken($primary-color, 5);
     list-style: none;
     transform: translate3d(0, -100%, 0);
     @include easeOut;
@@ -92,8 +92,8 @@
     .portrait{
       width: 250px;
       height: 250px;
-      background:$brand-image;
-      border-radius: 6px;
+      background:url('../img/facetwo.jpg');
+      border-radius: 50%;
       border: 2px solid $secondary-color;
     }
   }
@@ -128,7 +128,7 @@
     &:hover{
       @include easeOut;
       color: $secondary-color;
-      text-decoration: underline solid pink;
+      //text-decoration: underline solid pink;
     }
   }
 }

@@ -41,14 +41,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #03738d;
+    background: #233140;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #444;
+    background: #2c3e50;
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
@@ -56,8 +56,8 @@
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
-      background: url(../img/brand.jpg);
-      border-radius: 6px;
+      background: url("../img/facetwo.jpg");
+      border-radius: 50%;
       border: 2px solid #0388a6; }
   .menu .nav-item.current > a {
     color: #0388a6; }
@@ -72,8 +72,7 @@
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
       transition: all 0.5s ease-out;
-      color: #0388a6;
-      text-decoration: underline solid pink; }
+      color: #0388a6; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -87,33 +86,6 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
-@media screen and (max-width: 768px) {
-  main {
-    align-items: center;
-    text-align: center; }
-    main .lg-heading {
-      line-height: 1;
-      margin-bottom: 1rem; }
-  ul.menu-nav,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0; }
-    ul.menu-nav.show,
-    div.menu-branding.show {
-      transform: translate3d(0, 0, 0); }
-  .menu-nav {
-    height: 75vh;
-    transform: translate3d(-100%, 0, 0);
-    font-size: 24px; }
-  .menu-branding {
-    height: 25vh;
-    transform: translate3d(100%, 0, 0); }
-    .menu-branding .potrait {
-      background: url(../img/brand.jpg);
-      wudth: 150px;
-      height: 150px; } }
-
 * {
   box-sizing: border-box; }
 
@@ -122,13 +94,13 @@
   z-index: 1; }
 
 body {
-  background: #444;
+  background: #2c3e50;
   color: #fff;
   height: 100%;
   margin: 0;
   font-family: sans-serif;
   line-height: 1.5;
-  overflow: hidden; }
+  position: relative; }
   body#bg-img {
     background: url(../img/background.jpg);
     background-size: cover;
@@ -141,7 +113,7 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.9); }
+      background: rgba(44, 62, 80, 0.9); }
 
 h1, h2, h3 {
   margin: 0;
@@ -166,7 +138,7 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%; }
+  min-height: calc(100vh - 60px); }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -178,3 +150,113 @@ main {
     overflow: hidden; }
     main#particles-js h1 {
       margin-top: 5vh; }
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+  grid-template-columns: repeat(3, 1fr); }
+
+.bio-image {
+  grid-area: bioimage;
+  margin: auto;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 3px solid #0388a6; }
+
+.bio {
+  grid-area: bio;
+  font-size: 1.5rem; }
+
+.job-1 {
+  grid-area: job1; }
+
+.job-2 {
+  grid-area: job2; }
+
+.job-3 {
+  grid-area: job3; }
+
+.job {
+  background: #354b60;
+  padding: 0.5rem;
+  border-bottom: 8px solid #0388a6; }
+
+.projects {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr); }
+  .projects img {
+    width: 100%;
+    border: 3px solid white; }
+    .projects img:hover {
+      border-color: #0388a6;
+      transition: all 0.5s ease-out;
+      opacity: 4; }
+
+.btn, .btn-light {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-light:hover {
+    background: #0388a6; }
+
+.btn-light {
+  background: #013642; }
+
+#main-footer {
+  font-family: monospace;
+  text-align: center;
+  padding: 1rem;
+  background: #1a252f;
+  height: 60px; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .bio-image {
+      background: url("../img/facetwo_small.jpg");
+      width: 150px;
+      height: 150px; }
+  .about-info {
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (max-width: 500px) {
+  main h1 {
+    font-size: 10px;
+    text-align: center;
+    margin-top: 40vh; }
+  .projects {
+    grid-template-columns: 1fr; } }
