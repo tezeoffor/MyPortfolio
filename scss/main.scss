@@ -164,6 +164,27 @@ main{
   background: darken($secondary-color, 20);
 }
 
+.boxes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 10px;
+
+  div{
+    font-size: 25px;
+    border: 3px solid $secondary-color;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 15px;
+    @include easeOut;
+
+    &:hover{
+      padding: 0.5rem 1.5rem;
+      background: $secondary-color;
+      padding-right: 150px;
+    }
+  }
+}
 
 
 #main-footer{
@@ -172,6 +193,13 @@ main{
   padding: 1rem;
   background: darken($primary-color, 10);
   height: 60px;
+  @include easeOut;
+
+  &:hover{
+    background: $secondary-color;
+    font-family: sans-serif;
+    font-size: 20px;
+  }
 }
 
 @import "mobile";
