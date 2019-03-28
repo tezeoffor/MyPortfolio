@@ -74,9 +74,10 @@
 // Smartphones
 // TODO: doesnt work
 @include mediaSm{
-    main h1{
-    font-size: 10px;
-    text-align: center;
+    #particles-js h1{
+    color: #fff;
+    font-size: 21px;
+    text-align: left;
     margin-top: 10vh;
     }
 
